@@ -1,0 +1,12 @@
+{
+  "name": "nodebasic",
+  "version": "1.0.0",
+  "description": "A simple node application",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node index"
+  },
+  "author": "Aniket Varma",
+  "license": "ISC"
+}
