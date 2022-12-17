@@ -2,10 +2,14 @@
 var rect=require('./rectangle.js')
 
 function solve(l,b){
-    if(l<=0 || b<=0)    console.log("Invalid Dimesnions")
-    else{
-        console.log("Perimter: "+rect.perimeter(l,b)+" Area: "+rect.area(l,b))
-    }
+    rect(l,b, (err, rectangle) =>{
+        if(err){
+            console.log("Error: "+err.message)
+        }
+        else{
+            console.log("Area: "+rectangle.area()+" Perimeter: "+rectangle.perimeter())
+        }
+    })
 }
 solve(3,5)
 solve(-3,2)

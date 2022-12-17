@@ -1,2 +1,16 @@
-exports.perimeter = (l,b) => (2*(l+b))
-exports.area = (l,b) => (l*b)
+module.exports = (l,b,callback) =>{
+    if(l<=0 || b<=0){
+        setTimeout(() => {
+            callback(new Error("Invalid Dimension"),null)
+        },2000)
+    }
+    else{
+        setTimeout(() => {
+            callback(null,
+                {
+                    perimeter: () => (2*(l+b)),
+                    area: () => (l*b)
+                })
+        },2000)
+    }
+}
